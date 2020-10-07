@@ -1,0 +1,37 @@
+.Product {
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px rgba(226, 226, 226, 0.692);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 40px;
+    padding: 10px;
+    text-align: center;
+    width: 224px;
+  }
+  
+  .Product-Image {
+    height: 180px;
+  }
+  
+  .Product-Footer {
+    height: 120px;
+  }
+  
+  .Product-Price {
+    font-size: 1.4em;
+    font-weight: 800;
+    margin: 0;
+    padding: 20px 0;
+  }
+  .Product-Title {
+    font-size: .8em;
+    margin: 0;
+  }
+  
+  .Product a {
+    color: rgb(61, 61, 61);
+    text-decoration: none;
+  }
