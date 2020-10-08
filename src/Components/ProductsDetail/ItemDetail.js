@@ -43,7 +43,7 @@ function ItemDetail () {
     }
 
     const renderProduct = () => (
-        <p className='Product-Description'>
+        <p className='Product-Descriptionn'>
           {product.description}
         </p>
       )
@@ -56,11 +56,14 @@ function ItemDetail () {
         <>
           {loading && <Loader/>}
           {!loading &&
-            <div className="Product" style={{"display": "flex", "justifyContent": "center"}}>
-                <h2 className="Product-Title">{product.title}</h2>
-                <img alt='product' className='imgItem' src={product.img}/>
-                {renderProduct()}
-                <Button onClick={toggleAdd} sign={'Add to Cart'}/>
+            <div className="ProductDetail" style={{"display": "flex", "justifyContent": "center"}}>
+                <h2 className='Product-Titles'>{product.title}</h2>
+                <br/>
+                <img alt='product' className='Product-Images' src={product.img}/>
+                {renderProduct()}<br/>
+                <p className='Product-Cuotas'>3, 6 y 12 cuotas <strong>sin intereses</strong>.</p><br/>
+                <p className='Product-Prices'>${product.price}</p>
+                <Button className='Product-Buton' onClick={toggleAdd}>Añadir al carrito</Button> 
             </div>
             }
         </>
