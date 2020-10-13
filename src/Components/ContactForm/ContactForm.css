@@ -1,0 +1,35 @@
+.Home-Tittle {
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 5%;
+    left: 0%;
+    width:100%;
+    font-family: Montserrat;
+    font-size: 190%;
+    font-style: normal;
+}
+.prueba{
+    display: flex;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+.comentario{
+    display: flex;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}

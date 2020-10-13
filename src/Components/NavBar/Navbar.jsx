@@ -12,12 +12,12 @@ class myNav extends React.Component {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link href="/">Inicio</Nav.Link>
-                        <Nav.Link href="/products">Cocina</Nav.Link>
-                        <Nav.Link href="/products">Living</Nav.Link>
-                        <Nav.Link href="/products">Oficina</Nav.Link>
-                        <Nav.Link href="#contact">Contáctanos</Nav.Link>
+                        <Nav.Link href="/products">Productos</Nav.Link>
+                        <Nav.Link href="/products/living">Living</Nav.Link>
+                        <Nav.Link href="/products/oficina">Oficina</Nav.Link>
+                        <Nav.Link href="/products/cocina">Cocina</Nav.Link>
+                        <Nav.Link href="/contact">Contacto</Nav.Link>
                     </Nav>
-                    <Nav.Link className="register" href="#register">Regístrate</Nav.Link>
                     <CardIcon />
                 </Navbar.Collapse>
             </Navbar>

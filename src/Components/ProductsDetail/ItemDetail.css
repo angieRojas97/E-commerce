@@ -1,18 +1,18 @@
+.Product-Images {
+    display: block;
+    width: 30%;
+    height: 30%;
+    box-shadow: none;
+    top: 20%;
+    margin: 5rem;
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px rgba(226, 226, 226, 0.692);
+    border-radius: 8px;
+}
+
 .ProductDetail {
     text-align: center;
 }
-  
-    .Product-Images {
-        display: block;
-        width: 30%;
-        height: 30%;
-        box-shadow: none;
-        top: 20%;
-        margin: 5rem;
-        border: 1px solid lightgray;
-        box-shadow: 3px 3px rgba(226, 226, 226, 0.692);
-        border-radius: 8px;
-    }
     
     .Product-Footer {
         height: 120px;

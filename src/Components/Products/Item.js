@@ -1,7 +1,20 @@
 import React from 'react';
+import ContainProduct from '../ContainProduct/ContainProduct';
+import ItemDetail from '../ProductsDetail/ItemDetail';
 
-export default function Item(props) {
-  return <ul class="list-group">
-    {props.data.map(element => <li class="list-group-item" id={element.id} key={element.id}>{element.name} {element.price}</li>)}
-  </ul>
-};
+const Item = (props) => {
+
+
+  return (
+    <div className="Home-Products">
+      {
+        props.data.map(product => {
+          const result = product.type ? <ContainProduct key={product.id} product={product}/>: '';
+          return result;
+        })
+      }
+    </div>
+  )
+}
+
+export default Item;
