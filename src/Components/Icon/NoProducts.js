@@ -5,7 +5,7 @@ export default function NoProducts () {
     return(
         <>
             <div>No agregaste productos al carrito aún</div>
-            <div href="/">Volver al inicio</div>
+            <a href="/products">Presiona aquí para ver los productos</a>
         </>
     )
 }

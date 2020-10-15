@@ -1,0 +1,47 @@
+.text{
+    color: gray;
+    margin: 30px 5px 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 120%;
+}
+
+.text2{
+    color: gray;
+    margin:  -55px   0px   30px   650px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 120%;
+}
+
+.campos{
+    margin: 30px 5px 30px;
+    display: flex;
+    width: 450px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+.cuadro{
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px rgba(226, 226, 226, 0.692);
+    border-radius: 8px;
+    margin: 40px;
+    padding: 10px;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+}
+
+.cuadro2{
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px rgba(226, 226, 226, 0.692);
+    border-radius: 8px;
+    margin:  -540px   0px   30px   700px;
+    padding: 10px;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+}
+
+.link{
+    margin:  100px   250px   0px   70px;
+}

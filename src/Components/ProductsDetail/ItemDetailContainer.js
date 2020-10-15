@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { getFirestore } from '../../firebase';
 import ContainProduct from "../ContainProduct/ContainProduct";
-import Loader from '../Loader/Loader'
-import ItemDetail from "./ItemDetail";
+import Loader from '../Loader/Loader';
 
 
 export default function ItemDetailContainer() {
@@ -31,7 +30,6 @@ export default function ItemDetailContainer() {
           }, []);
 
         if (!loading) {
-            console.log(items)
             return (
               <div className="Home">
                 <div className="Home-Products">

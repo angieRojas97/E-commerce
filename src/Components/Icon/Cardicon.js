@@ -1,16 +1,17 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useState, useContext } from 'react';
 import carrito from './img/cart.jpg';
 import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import { CardContext } from '../../Context/CardContext';
 import ItemDetailCart from './ItemDetailCart'
 import NoProducts from './NoProducts';
+import { Link } from 'react-router-dom';
 
 
 export default function CardIcon () {
 
     const [open, setOpen] = useState(false);
-    const [card, setCard] = useContext(CardContext);
+    const [card] = useContext(CardContext);
 
 
     const toggleModal=()=>{
@@ -38,7 +39,9 @@ export default function CardIcon () {
                 </ModalBody>
                 <ModalFooter>
                     <Button onClick={toggleModal}>Cerrar</Button>
-                    <Button>Comprar</Button>
+                    <Link to='/cardDetail'>
+                        <Button onClick={toggleModal}>Comprar</Button>
+                    </Link>
                 </ModalFooter>
             </Modal>
     </>

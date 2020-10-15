@@ -1,22 +1,26 @@
 import React from 'react';
-import { Navbar, NavDropdown, Nav, Button } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import CardIcon from '../Icon/Cardicon';
+import './Navbar.css';
 
 class myNav extends React.Component {
 
     render() {
         return (
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="/">Muebles JR</Navbar.Brand>
+                <Link to='/'>
+                    <Navbar.Brand>Muebles JR</Navbar.Brand>
+                </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/">Inicio</Nav.Link>
-                        <Nav.Link href="/products">Productos</Nav.Link>
-                        <Nav.Link href="/products/living">Living</Nav.Link>
-                        <Nav.Link href="/products/oficina">Oficina</Nav.Link>
-                        <Nav.Link href="/products/cocina">Cocina</Nav.Link>
-                        <Nav.Link href="/contact">Contacto</Nav.Link>
+                        <Link to='/' className='linkRoute'>Inicio</Link>
+                        <Link to='/products' className='linkRoute'>Productos</Link>
+                        <Link to='/products/living' className='linkRoute'>Living</Link>
+                        <Link to='/products/oficina' className='linkRoute'>Oficina</Link>
+                        <Link to='/products/cocina' className='linkRoute'>Cocina</Link>
+                        <Link to='/contact' className='linkRoute'>Contacto</Link>
                     </Nav>
                     <CardIcon />
                 </Navbar.Collapse>

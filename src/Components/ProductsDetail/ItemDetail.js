@@ -27,7 +27,6 @@ function ItemDetail () {
                 return true;
             }
             const dataQuery = doc.data();
-            console.log(dataQuery);
             setProduct({ id: doc.id, ...doc.data() });
         })
         .catch((error) =>{
