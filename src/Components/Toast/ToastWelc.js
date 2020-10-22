@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Input, Label} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import ReactDOM from 'react-dom';
 
 
 class ToastWelc extends React.Component {
@@ -8,8 +9,8 @@ class ToastWelc extends React.Component {
         super(props);
         this.state = {
             open: true,
-            cont: 0
-
+            cont: 0,
+            email: ''
         };
     }
 
@@ -19,7 +20,19 @@ class ToastWelc extends React.Component {
     closeModal=()=>{
         this.setState({open: !this.state.open});
     }
+    onChangeEmail=(e)=>{
+        e.preventDefault();
+        this.state.email= e.target.value;
+    }
+
     saveMail=()=>{
+        if (this.state.email.length > 0){
+        ReactDOM.findDOMNode(this.refs.email).value = "";
+        window.alert('Tu email se ha registrado exitosamente!')
+        this.closeModal();
+    } else {
+        window.alert('Ingresa un email válido por favor!')
+    }
     }
 
 
@@ -29,12 +42,12 @@ class ToastWelc extends React.Component {
                 <ModalHeader>
                     Bienvenido!
                     <br/>
-                    Deseas recibir nuestras super ofertas?
+                    Deseas recibir nuestras ofertas?
                 </ModalHeader>
                 <ModalBody>
                     <FormGroup>
                         <Label for="email">E-mail</Label>
-                        <Input type="email" id="email" ref="email"/>
+                        <Input onInput={this.onChangeEmail} type="email" id="email" ref="email"/>
                     </FormGroup>
                 </ModalBody>
                 <ModalFooter>

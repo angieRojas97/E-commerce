@@ -1,9 +1,10 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect} from 'react';
 import { CardContext } from '../../Context/CardContext';
 import { DataContext } from '../../Context/DataContext';
 import { getFirestore } from '../../firebase';
 import * as firebase from 'firebase/app';
 import 'firebase/firestore';
+
 
 export default function UpdateData() {
     const [card] = useContext(CardContext);
@@ -27,6 +28,7 @@ export default function UpdateData() {
         })
     },[]);
 
+    
     return(
         window.alert('Tus datos han sido enviados de manera correcta!')
     )

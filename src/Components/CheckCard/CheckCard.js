@@ -1,10 +1,13 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useState} from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import './CheckCard.css';
 import ItemDetailCart from '../Icon/ItemDetailCart';
 import { CardContext } from '../../Context/CardContext';
 import { DataContext } from '../../Context/DataContext';
 import UpdateData from './UpdateData';
+import { Link } from 'react-router-dom';
+import TotalCart from '../TotalCart/TotalCart';
+
 
 export default function CheckCard() {
     const [card] = useContext(CardContext);
@@ -16,14 +19,19 @@ export default function CheckCard() {
     const [click, setClick] = useState(false)
 
     function handleData() {
-        const params = [
-            name,
-            email,
-            phone,
-            address
-        ]
-        setData(data => [...data, params])
-        setClick(true)
+        if (name === '' || email === '' || address === '') {
+            window.alert('Por favor, completa los datos obligatorios')
+        }
+        else{
+            const params = [
+                name,
+                email,
+                phone,
+                address
+            ]
+            setData(data => [...data, params])
+            setClick(true)
+        }
         
     }
 
@@ -48,11 +56,14 @@ export default function CheckCard() {
                     <Label for="address">Dirección de envío (obligatorio)</Label>
                     <Input className='campos' onInput={(e) => setAddress(e.target.value)} type="text" name="address" id="address" placeholder="Dirección" required/>
                 </FormGroup>
-                <Button onClick={handleData}>Enviar Datos</Button>
+                    <Button onClick={handleData}>Enviar Datos</Button>
             </Form>
             <div className='cuadro2'>
                 <ItemDetailCart card={card}/>
-                <a className='link' href='/products'>Seguir comprando...</a>
+                <TotalCart/>
+                <Link to='/products'>
+                    <Button>Seguir comprando...</Button>
+                </Link>
             </div>
         {click && <UpdateData/>}
         </>

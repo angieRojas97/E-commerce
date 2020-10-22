@@ -1,6 +1,5 @@
 import React from 'react';
 import ContainProduct from '../ContainProduct/ContainProduct';
-import ItemDetail from '../ProductsDetail/ItemDetail';
 
 const Item = (props) => {
 

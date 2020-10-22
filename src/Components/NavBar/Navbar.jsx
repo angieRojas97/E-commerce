@@ -3,6 +3,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import CardIcon from '../Icon/Cardicon';
 import './Navbar.css';
+import NumberCount from '../Icon/NumberCount';
 
 class myNav extends React.Component {
 
@@ -23,6 +24,7 @@ class myNav extends React.Component {
                         <Link to='/contact' className='linkRoute'>Contacto</Link>
                     </Nav>
                     <CardIcon />
+                    <NumberCount/>
                 </Navbar.Collapse>
             </Navbar>
         )

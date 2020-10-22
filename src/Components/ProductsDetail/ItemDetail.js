@@ -5,6 +5,7 @@ import { getFirestore } from '../../firebase';
 import { CardContext } from '../../Context/CardContext';
 import Loader from '../Loader/Loader';
 import './ItemDetail.css';
+import { TotalContext } from '../../Context/TotalContext';
 
 
 function ItemDetail () {
@@ -12,6 +13,7 @@ function ItemDetail () {
     const [product, setProduct] = useState({});
     const [card, setCard] = useContext(CardContext);
     const [loading, setLoading] = useState(false);
+    const [total, setTotal] = useContext(TotalContext);
 
 
     useEffect(() => {
@@ -39,6 +41,8 @@ function ItemDetail () {
 
     const toggleAdd =()=>{
         setCard(currentCard => [...currentCard, product])
+        setTotal(currentTotal => [...currentTotal, product.price])
+
     }
 
     const renderProduct = () => (

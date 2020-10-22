@@ -10,7 +10,7 @@
     font-size: 190%;
     font-style: normal;
 }
-.prueba{
+.campos{
     display: flex;
     width: 90%;
     padding: 10px;
@@ -32,4 +32,15 @@
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical
+}
+
+.cuadro{
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px rgba(226, 226, 226, 0.692);
+    border-radius: 8px;
+    margin: 40px;
+    padding: 10px;
+    text-align: center;
+    width: 500px;
+    height: 500px;
 }

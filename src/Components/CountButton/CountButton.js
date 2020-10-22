@@ -19,7 +19,6 @@ export default function CountButton({element}) {
 
     const toggleAdd =()=>{
         const product = element;
-        console.log(product);
         setCard(currentCard => [...currentCard, product])
     }
     

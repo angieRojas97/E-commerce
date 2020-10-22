@@ -6,6 +6,7 @@ import { CardContext } from '../../Context/CardContext';
 import ItemDetailCart from './ItemDetailCart'
 import NoProducts from './NoProducts';
 import { Link } from 'react-router-dom';
+import TotalCart from '../TotalCart/TotalCart';
 
 
 export default function CardIcon () {
@@ -19,7 +20,7 @@ export default function CardIcon () {
     }
 
     const prueba=()=>{
-        if (card.lenght > 0){
+        if (card.length > 0){
             return true;
         }
         return false;
@@ -36,6 +37,7 @@ export default function CardIcon () {
                 </ModalHeader>
                 <ModalBody>
                     { prueba ? <ItemDetailCart card={card}/> : <NoProducts/> }
+                    {prueba ? <TotalCart/> : <p>Aun no agregaste productos al carrito</p>}
                 </ModalBody>
                 <ModalFooter>
                     <Button onClick={toggleModal}>Cerrar</Button>
